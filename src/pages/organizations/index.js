@@ -33,7 +33,7 @@ export default class Organization extends Component {
     this.setState({ loading: true });
     try {
       const response = await api.get(`/repos/${nameRep}`);
-      if (response.data.length !== 0) {this.setState({data: [ JSON.stringify(response.data),...oldMessages], loading: false, show: false });}
+      this.setState({data: responde.data, loading: false, show: false });
     } catch (err) {
       this.setState({ loading: false, errorMessage: `Opss, nada foi encontrado com o nome: ${nameRep}` });
     }
