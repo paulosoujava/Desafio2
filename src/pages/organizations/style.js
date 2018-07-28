@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   },
   container_list: {
     flex: 1,
-    backgroundColor: colors.danger,
   },
 });
 export default styles;

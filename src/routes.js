@@ -7,6 +7,7 @@ import Issues from 'pages/issues';
 const Routes = StackNavigator({
   Organization: { screen: Organization },
   Issues: { screen: Issues },
+
 });
 
 export default Routes;

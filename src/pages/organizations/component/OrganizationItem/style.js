@@ -7,18 +7,18 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: colors.white,
     margin: metrics.baseMargin,
-    padding: metrics.basePadding,
+    padding: 4,
   },
   container_image: {
     flex: 2,
     height: 80,
-    width: 120,
-    backgroundColor: colors.danger,
+    width: 80,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     height: 80,
     width: 80,
-    backgroundColor: colors.danger,
   },
   container_info: {
     flex: 3,

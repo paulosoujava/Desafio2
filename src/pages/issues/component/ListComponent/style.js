@@ -4,6 +4,7 @@ import { colors, metrics } from 'styles';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    marginTop: 5,
     borderRadius: 4,
     backgroundColor: colors.white,
     margin: metrics.baseMargin,
@@ -11,16 +12,15 @@ const styles = StyleSheet.create({
   },
   container_image: {
     flex: 2,
-    borderRadius: 40,
-    height: 80,
-    width: 40,
-    backgroundColor: colors.danger,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
-    borderRadius: 8,
-    height: 80,
-    width: 80,
-    backgroundColor: colors.danger,
+    borderRadius: 25, // para arredondar 100%, use metade do width e height aqui
+    alignSelf: 'center',
+    borderWidth: 1,
+    height: 50,
+    width: 50,
   },
   container_info: {
     flex: 3,

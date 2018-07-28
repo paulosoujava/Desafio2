@@ -1,21 +1,41 @@
-import React from 'react';
-import { View, Text, Image } from 'react-native';
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './style';
 
+export default class OrganizationItem extends Component {
+  render() {
+    return (
+        <View style={styles.container}>
+          <View style={styles.container_image}>
+            <Image style={styles.image} source={{ uri: this.props.item.owner.avatar_url }} />
+          </View>
+          <View style={styles.container_info}>
+            <Text style={styles.infoTitle}>
+              { this.props.item.login }
+            </Text>
+            <Text style={styles.infoSubtitle}>
+              { this.props.item.full_name }
+            </Text>
+          </View>
+          <View style={styles.container_row}>
+            <Icon name="angle-right" size={20} style={styles.icon} />
+          </View>
+        </View>
 
-const OrganizationItem = ({ item }) => (
-  <View style={styles.container}>
-    <View style={styles.container_image}>
-      <Image style={styles.imagem} source={{ uri: item.avatar_url}} />
-    </View>
-    <View style={styles.container_info}>
-      <Text style={styles.infoTitle}>{item.name}</Text>
-      <Text style={styles.infoSubtitle}>{item.login}</Text>
-    </View>
-    <View style={styles.container_row}>
-      <Icon name="row" size={20} style={styles.icon} />
-    </View>
-  </View>
-);
-export default OrganizationItem;
+    );
+  }
+}
+
+// OrganizationItem.protoTypes = {
+//   avatar_url: PropTypes.string,
+//   full_name: PropTypes.string,
+//   login: PropTypes.string,
+// };
